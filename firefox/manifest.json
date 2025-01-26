@@ -1,11 +1,11 @@
 {
   "manifest_version": 2,
-  "name": "BlueRaven",
+  "name": "BlueRavens",
   "version": "1.0",
   "description": "Modern theme for Twitter/X",
   "browser_specific_settings": {
     "gecko": {
-      "id": "blueraven@example.com"
+      "id": "blueravens@example.com"
     }
   },
   "icons": {
