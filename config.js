@@ -74,6 +74,48 @@ const TWITTER_MODS = {
         'div[data-testid="DMDrawer"]',
       ]
     },
+    shareButton: {
+      enabled: false,
+      description: "Hide Share Button",
+      selectors: [
+        'button[aria-label="Share post"]'
+      ]
+    },
+    moreButton: {
+      enabled: false,
+      description: "Hide More Button",
+      selectors: [
+        'button[aria-label="More"]'
+      ]
+    },
+    socialContext: {
+      enabled: false,
+      description: "Hide \"[X] Reposted\"",
+      selectors: [
+        'span[data-testid="socialContext"]'
+      ]
+    },
+    accountSuggestions: {
+      enabled: false,
+      description: "Hide Account Suggestions",
+      selectors: [
+        'button[data-testid="UserCell"]'
+      ]
+    },
+    trendingNews: {
+      enabled: false,
+      description: "Hide \"News\"",
+      selectors: [
+        'div[data-testid="trend"]'
+      ]
+    },
+    newPostsBanner: {
+      enabled: false,
+      description: "Hide \"[X] Posted\" Banner",
+      selectors: [
+        'button[aria-label^="New posts are available"]'
+      ]
+    },
     userInfo: {
       enabled: false,
       description: "Hide User Info in Timeline",
@@ -278,12 +320,8 @@ const TWITTER_MODS = {
       enabled: false,
       description: "Hide View Counts",
       selectors: [
-        // Target analytics link view counts
-        'a[href$="/analytics"] span[data-testid="app-text-transition-container"]',
-        // Backup using aria-label
-        'a[aria-label*="views"][aria-label*="View post analytics"] span[data-testid="app-text-transition-container"]',
-        // Additional backup using the specific view count icon
-        'a[href$="/analytics"]:has(svg path[d*="M8.75 21V3h2v18h-2z"]) span[data-testid="app-text-transition-container"]'
+        // Hide the entire element, along with the icon
+        'a[aria-label*="View post analytics"]',
       ]
     },
     bookmarkCounts: {

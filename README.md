@@ -67,11 +67,15 @@ genAI can generally one-shot most features if you feed it the proper HTML - just
 8. The BlueRaven icon should now appear in your toolbar!
 
 ### Firefox
+#### Installing as a temporary Add-On
 1. Visit `about:debugging#/runtime/this-firefox`
 2. Click "Load Temporary Add-on"
 3. Navigate to the `firefox` folder inside BlueRaven
 4. Select `manifest.json` from the Firefox folder
 5. The BlueRaven icon will appear in your toolbar
+
+#### Installing as a permanent Add-On
+See https://wiki.mozilla.org/Add-ons/Extension_Signing#Unbranded_Builds for instructions on installing unsigned extensions.  Then zip the contents of the `firefox` folder (and not the folder itself!) into a zip file, and upload the same to about:addons.
 
 ## 💡 Usage
 1. Click the BlueRaven icon in your browser toolbar

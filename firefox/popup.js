@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       },
       { 
         id: 'hideElements', 
-        title: 'Hide Side Tabs',
+        title: 'Side Tabs',
         filter: key => ['allTabs',
                         'communities',
                         'premium',
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       },
       {
         id: 'hideElements',
-        title: 'Hide Elements',
+        title: 'Elements',
         filter: key => ['leftSidebar',
                         'rightSidebar',
                         'bothSidebars',
@@ -49,7 +49,17 @@ document.addEventListener('DOMContentLoaded', async () => {
                         'brokenSpacer',
                         'hidePremiumBadge',
                         'messageDrawer',
-                        'userAvatar',
+                        'shareButton',
+                        'moreButton',
+                        'socialContext',
+                        'accountSuggestions',
+                        'trendingNews',
+                        'newPostsBanner'].includes(key)
+      },
+      {
+        id: 'hideElements',
+        title: 'User Info',
+        filter: key => ['userAvatar',
                         'userName',
                         'userHandle',
                         'userNameAndHandle',
