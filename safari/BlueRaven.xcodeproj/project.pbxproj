@@ -1,0 +1,575 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AABD38332BA9986D00903A04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABD38322BA9986D00903A04 /* AppDelegate.swift */; };
+		AABD38352BA9986D00903A04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABD38342BA9986D00903A04 /* ViewController.swift */; };
+		AABD38372BA9986F00903A04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AABD38362BA9986F00903A04 /* Assets.xcassets */; };
+		AABD383A2BA9986F00903A04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AABD38382BA9986F00903A04 /* Main.storyboard */; };
+		AABD38432BA9986F00903A04 /* BlueRaven Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = AABD38422BA9986F00903A04 /* BlueRaven Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AABD38482BA9986F00903A04 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABD38472BA9986F00903A04 /* SafariWebExtensionHandler.swift */; };
+		AABD384B2BA9986F00903A04 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AABD384A2BA9986F00903A04 /* icon.png */; };
+		AABD384D2BA9986F00903A04 /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = AABD384C2BA9986F00903A04 /* popup.html */; };
+		AABD384F2BA9986F00903A04 /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = AABD384E2BA9986F00903A04 /* popup.js */; };
+		AABD38512BA9986F00903A04 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = AABD38502BA9986F00903A04 /* manifest.json */; };
+		AABD38532BA9986F00903A04 /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = AABD38522BA9986F00903A04 /* background.js */; };
+		AABD38552BA9986F00903A04 /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = AABD38542BA9986F00903A04 /* content.js */; };
+		AABD38572BA9986F00903A04 /* config.js in Resources */ = {isa = PBXBuildFile; fileRef = AABD38562BA9986F00903A04 /* config.js */; };
+		AABD38592BA9986F00903A04 /* styles.css in Resources */ = {isa = PBXBuildFile; fileRef = AABD38582BA9986F00903A04 /* styles.css */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AABD38442BA9986F00903A04 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AABD38272BA9986D00903A04 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AABD38412BA9986F00903A04;
+			remoteInfo = "BlueRaven Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AABD38612BA9986F00903A04 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				AABD38432BA9986F00903A04 /* BlueRaven Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		AABD382F2BA9986D00903A04 /* BlueRaven.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlueRaven.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AABD38322BA9986D00903A04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AABD38342BA9986D00903A04 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AABD38362BA9986F00903A04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AABD38392BA9986F00903A04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AABD383B2BA9986F00903A04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AABD383C2BA9986F00903A04 /* BlueRaven.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BlueRaven.entitlements; sourceTree = "<group>"; };
+		AABD38422BA9986F00903A04 /* BlueRaven Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "BlueRaven Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AABD38472BA9986F00903A04 /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		AABD384A2BA9986F00903A04 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		AABD384C2BA9986F00903A04 /* popup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = popup.html; sourceTree = "<group>"; };
+		AABD384E2BA9986F00903A04 /* popup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = popup.js; sourceTree = "<group>"; };
+		AABD38502BA9986F00903A04 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
+		AABD38522BA9986F00903A04 /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = background.js; sourceTree = "<group>"; };
+		AABD38542BA9986F00903A04 /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = content.js; sourceTree = "<group>"; };
+		AABD38562BA9986F00903A04 /* config.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = config.js; sourceTree = "<group>"; };
+		AABD38582BA9986F00903A04 /* styles.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = styles.css; sourceTree = "<group>"; };
+		AABD385E2BA9986F00903A04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AABD385F2BA9986F00903A04 /* BlueRaven_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BlueRaven_Extension.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AABD382C2BA9986D00903A04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AABD383F2BA9986F00903A04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AABD38262BA9986D00903A04 = {
+			isa = PBXGroup;
+			children = (
+				AABD38312BA9986D00903A04 /* BlueRaven */,
+				AABD38462BA9986F00903A04 /* BlueRaven Extension */,
+				AABD38302BA9986D00903A04 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AABD38302BA9986D00903A04 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AABD382F2BA9986D00903A04 /* BlueRaven.app */,
+				AABD38422BA9986F00903A04 /* BlueRaven Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AABD38312BA9986D00903A04 /* BlueRaven */ = {
+			isa = PBXGroup;
+			children = (
+				AABD38322BA9986D00903A04 /* AppDelegate.swift */,
+				AABD38342BA9986D00903A04 /* ViewController.swift */,
+				AABD38362BA9986F00903A04 /* Assets.xcassets */,
+				AABD38382BA9986F00903A04 /* Main.storyboard */,
+				AABD383B2BA9986F00903A04 /* Info.plist */,
+				AABD383C2BA9986F00903A04 /* BlueRaven.entitlements */,
+			);
+			path = BlueRaven;
+			sourceTree = "<group>";
+		};
+		AABD38462BA9986F00903A04 /* BlueRaven Extension */ = {
+			isa = PBXGroup;
+			children = (
+				AABD38472BA9986F00903A04 /* SafariWebExtensionHandler.swift */,
+				AABD385E2BA9986F00903A04 /* Info.plist */,
+				AABD385F2BA9986F00903A04 /* BlueRaven_Extension.entitlements */,
+				AABD38492BA9986F00903A04 /* Resources */,
+			);
+			path = "BlueRaven Extension";
+			sourceTree = "<group>";
+		};
+		AABD38492BA9986F00903A04 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AABD384A2BA9986F00903A04 /* icon.png */,
+				AABD384C2BA9986F00903A04 /* popup.html */,
+				AABD384E2BA9986F00903A04 /* popup.js */,
+				AABD38502BA9986F00903A04 /* manifest.json */,
+				AABD38522BA9986F00903A04 /* background.js */,
+				AABD38542BA9986F00903A04 /* content.js */,
+				AABD38562BA9986F00903A04 /* config.js */,
+				AABD38582BA9986F00903A04 /* styles.css */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AABD382E2BA9986D00903A04 /* BlueRaven */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AABD38622BA9986F00903A04 /* Build configuration list for PBXNativeTarget "BlueRaven" */;
+			buildPhases = (
+				AABD382B2BA9986D00903A04 /* Sources */,
+				AABD382C2BA9986D00903A04 /* Frameworks */,
+				AABD382D2BA9986D00903A04 /* Resources */,
+				AABD38612BA9986F00903A04 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AABD38452BA9986F00903A04 /* PBXTargetDependency */,
+			);
+			name = BlueRaven;
+			productName = BlueRaven;
+			productReference = AABD382F2BA9986D00903A04 /* BlueRaven.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AABD38412BA9986F00903A04 /* BlueRaven Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AABD385D2BA9986F00903A04 /* Build configuration list for PBXNativeTarget "BlueRaven Extension" */;
+			buildPhases = (
+				AABD383E2BA9986F00903A04 /* Sources */,
+				AABD383F2BA9986F00903A04 /* Frameworks */,
+				AABD38402BA9986F00903A04 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BlueRaven Extension";
+			productName = "BlueRaven Extension";
+			productReference = AABD38422BA9986F00903A04 /* BlueRaven Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AABD38272BA9986D00903A04 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					AABD382E2BA9986D00903A04 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					AABD38412BA9986F00903A04 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+				};
+			};
+			buildConfigurationList = AABD382A2BA9986D00903A04 /* Build configuration list for PBXProject "BlueRaven" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AABD38262BA9986D00903A04;
+			productRefGroup = AABD38302BA9986D00903A04 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AABD382E2BA9986D00903A04 /* BlueRaven */,
+				AABD38412BA9986F00903A04 /* BlueRaven Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AABD382D2BA9986D00903A04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AABD38372BA9986F00903A04 /* Assets.xcassets in Resources */,
+				AABD383A2BA9986F00903A04 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AABD38402BA9986F00903A04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AABD38572BA9986F00903A04 /* config.js in Resources */,
+				AABD38532BA9986F00903A04 /* background.js in Resources */,
+				AABD38592BA9986F00903A04 /* styles.css in Resources */,
+				AABD38552BA9986F00903A04 /* content.js in Resources */,
+				AABD384D2BA9986F00903A04 /* popup.html in Resources */,
+				AABD384B2BA9986F00903A04 /* icon.png in Resources */,
+				AABD38512BA9986F00903A04 /* manifest.json in Resources */,
+				AABD384F2BA9986F00903A04 /* popup.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AABD382B2BA9986D00903A04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AABD38352BA9986D00903A04 /* ViewController.swift in Sources */,
+				AABD38332BA9986D00903A04 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AABD383E2BA9986F00903A04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AABD38482BA9986F00903A04 /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AABD38452BA9986F00903A04 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AABD38412BA9986F00903A04 /* BlueRaven Extension */;
+			targetProxy = AABD38442BA9986F00903A04 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AABD38382BA9986F00903A04 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AABD38392BA9986F00903A04 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AABD385A2BA9986F00903A04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AABD385B2BA9986F00903A04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		AABD385C2BA9986F00903A04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "BlueRaven Extension/BlueRaven_Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "BlueRaven Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "BlueRaven Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.blueraven.BlueRaven-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		AABD38602BA9986F00903A04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "BlueRaven Extension/BlueRaven_Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "BlueRaven Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "BlueRaven Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.blueraven.BlueRaven-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		AABD38632BA9986F00903A04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BlueRaven/BlueRaven.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BlueRaven/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BlueRaven;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.blueraven.BlueRaven;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		AABD38642BA9986F00903A04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BlueRaven/BlueRaven.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BlueRaven/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BlueRaven;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.blueraven.BlueRaven;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AABD382A2BA9986D00903A04 /* Build configuration list for PBXProject "BlueRaven" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AABD385A2BA9986F00903A04 /* Debug */,
+				AABD385B2BA9986F00903A04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AABD385D2BA9986F00903A04 /* Build configuration list for PBXNativeTarget "BlueRaven Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AABD385C2BA9986F00903A04 /* Debug */,
+				AABD38602BA9986F00903A04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AABD38622BA9986F00903A04 /* Build configuration list for PBXNativeTarget "BlueRaven" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AABD38632BA9986F00903A04 /* Debug */,
+				AABD38642BA9986F00903A04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AABD38272BA9986D00903A04 /* Project object */;
+}
