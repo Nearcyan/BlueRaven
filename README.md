@@ -82,15 +82,25 @@ See https://wiki.mozilla.org/Add-ons/Extension_Signing#Unbranded_Builds for inst
 1. Open the Xcode project file located in the `safari/BlueRaven.xcodeproj` folder
 2. Select "BlueRaven" as the scheme to run
 3. Click the Build button (▶️) to build and run the app
-4. When the BlueRaven app opens, click "Open Safari Extension Preferences"
+4. When the BlueRaven app opens, click "Enable BlueRaven Extension"
 5. In Safari's preferences, enable the BlueRaven extension
 6. The BlueRaven icon will appear in your Safari toolbar
 
+#### Enabling Developer Mode for Safari Extensions
+Safari requires developer mode for unsigned extensions:
+1. Open Safari
+2. Go to Safari → Settings → Advanced
+3. Check "Show Develop menu in menu bar"
+4. From the Develop menu, select "Allow Unsigned Extensions"
+5. Quit and restart Safari
+6. Run the BlueRaven app and enable the extension
+
 #### Installation Notes
 - Requires macOS 10.15 (Catalina) or later and Safari 14 or later
-- You will need to have Xcode installed (available from the Mac App Store)
-- You may need to have an Apple Developer account and set up code signing to run the extension
-- **Note:** The Safari extension is still in development and may require additional configuration to build successfully
+- You must have Xcode installed (available from the Mac App Store)
+- The app window contains two buttons:
+  - "Enable BlueRaven Extension" - Opens extension settings for BlueRaven
+  - "Open Safari Extensions Settings" - Opens Safari's general extensions page
 
 ## 💡 Usage
 1. Click the BlueRaven icon in your browser toolbar
