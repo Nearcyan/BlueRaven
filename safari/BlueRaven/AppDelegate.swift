@@ -31,11 +31,24 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         descLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(descLabel)
         
-        // Create button
-        let button = NSButton(title: "Enable Safari Extension", target: self, action: #selector(openExtensionPreferences(_:)))
+        // Create main button
+        let button = NSButton(title: "Enable BlueRaven Extension", target: self, action: #selector(openExtensionPreferences(_:)))
         button.bezelStyle = .rounded
         button.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(button)
+        
+        // Create secondary button to open Safari extensions page directly
+        let safariButton = NSButton(title: "Open Safari Extensions Settings", target: self, action: #selector(openSafariExtensions(_:)))
+        safariButton.bezelStyle = .rounded
+        safariButton.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(safariButton)
+        
+        // Create status label
+        let statusLabel = NSTextField(labelWithString: "If the extension doesn't appear, you may need to enable developer mode in Safari")
+        statusLabel.font = NSFont.systemFont(ofSize: 12)
+        statusLabel.textColor = NSColor.secondaryLabelColor
+        statusLabel.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(statusLabel)
         
         // Set up constraints
         NSLayoutConstraint.activate([
@@ -46,7 +59,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             descLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20),
             
             button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            button.topAnchor.constraint(equalTo: descLabel.bottomAnchor, constant: 40)
+            button.topAnchor.constraint(equalTo: descLabel.bottomAnchor, constant: 40),
+            
+            safariButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            safariButton.topAnchor.constraint(equalTo: button.bottomAnchor, constant: 20),
+            
+            statusLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            statusLabel.topAnchor.constraint(equalTo: safariButton.bottomAnchor, constant: 30)
         ])
         
         window.contentView = view
@@ -57,20 +76,40 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     @objc func openExtensionPreferences(_ sender: Any) {
+        print("Attempting to open Safari Extension preferences with bundle ID: com.blueraven.BlueRaven-Extension")
+        
+        // Try to open the Safari preferences with the extension ID
         SFSafariApplication.showPreferencesForExtension(withIdentifier: "com.blueraven.BlueRaven-Extension") { error in
             DispatchQueue.main.async {
                 if let error = error {
+                    print("Error opening extension preferences: \(error.localizedDescription)")
+                    
+                    // Show alert with detailed error
                     let alert = NSAlert()
                     alert.messageText = "Error Opening Safari Extension Preferences"
-                    alert.informativeText = error.localizedDescription
+                    alert.informativeText = "Error: \(error.localizedDescription)\n\nBundle ID: com.blueraven.BlueRaven-Extension\n\nThis usually means the extension is not properly signed or not built correctly."
                     alert.alertStyle = .warning
                     alert.addButton(withTitle: "OK")
-                    alert.runModal()
+                    
+                    // Add an option to open Safari's general extension preferences
+                    alert.addButton(withTitle: "Open Safari Extensions")
+                    
+                    let response = alert.runModal()
+                    
+                    // If the user clicked "Open Safari Extensions"
+                    if response == .alertSecondButtonReturn {
+                        NSWorkspace.shared.open(URL(string: "safari-preferences://extensions")!)
+                    }
                 } else {
                     print("Safari Extension preferences opened successfully")
                 }
             }
         }
+    }
+    
+    @objc func openSafariExtensions(_ sender: Any) {
+        // Opens Safari's extensions preferences directly
+        NSWorkspace.shared.open(URL(string: "safari-preferences://extensions")!)
     }
     
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
