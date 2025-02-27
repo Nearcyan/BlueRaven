@@ -88,7 +88,9 @@ See https://wiki.mozilla.org/Add-ons/Extension_Signing#Unbranded_Builds for inst
 
 #### Installation Notes
 - Requires macOS 10.15 (Catalina) or later and Safari 14 or later
+- You will need to have Xcode installed (available from the Mac App Store)
 - You may need to have an Apple Developer account and set up code signing to run the extension
+- **Note:** The Safari extension is still in development and may require additional configuration to build successfully
 
 ## 💡 Usage
 1. Click the BlueRaven icon in your browser toolbar

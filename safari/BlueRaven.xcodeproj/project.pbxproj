@@ -126,6 +126,7 @@
 				AABD385F2BA9986F00903A04 /* BlueRaven_Extension.entitlements */,
 				AABD38492BA9986F00903A04 /* Resources */,
 			);
+			name = "BlueRaven Extension";
 			path = "BlueRaven Extension";
 			sourceTree = "<group>";
 		};
