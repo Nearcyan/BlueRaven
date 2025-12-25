@@ -46,11 +46,11 @@ https://user-images.githubusercontent.com/23431444/410151955-3a6bfd11-0ba6-4db0-
 
 ## 👥 Contributions
 
-Contributions are desired and welcome - **please test on both browsers beforehand!**
+Contributions are desired and welcome - **please test on all browsers beforehand!**
 
 Note from the AI's assistant: 100% of this codebase was written by AI and I have not reviewed almost any of it.
 
-genAI can generally one-shot most features if you feed it the proper HTML - just show it the popup window and the config.js and then make sure you make edits for both browsers.
+genAI can generally one-shot most features if you feed it the proper HTML - just show it the popup window and the config.js and then make sure you make edits for all browsers.
 
 ---
 
@@ -76,6 +76,31 @@ genAI can generally one-shot most features if you feed it the proper HTML - just
 
 #### Installing as a permanent Add-On
 See https://wiki.mozilla.org/Add-ons/Extension_Signing#Unbranded_Builds for instructions on installing unsigned extensions.  Then zip the contents of the `firefox` folder (and not the folder itself!) into a zip file, and upload the same to about:addons.
+
+### Safari
+#### Building the Safari Extension
+1. Open the Xcode project file located in the `safari/BlueRaven.xcodeproj` folder
+2. Select "BlueRaven" as the scheme to run
+3. Click the Build button (▶️) to build and run the app
+4. When the BlueRaven app opens, click "Enable BlueRaven Extension"
+5. In Safari's preferences, enable the BlueRaven extension
+6. The BlueRaven icon will appear in your Safari toolbar
+
+#### Enabling Developer Mode for Safari Extensions
+Safari requires developer mode for unsigned extensions:
+1. Open Safari
+2. Go to Safari → Settings → Advanced
+3. Check "Show Develop menu in menu bar"
+4. From the Develop menu, select "Allow Unsigned Extensions"
+5. Quit and restart Safari
+6. Run the BlueRaven app and enable the extension
+
+#### Installation Notes
+- Requires macOS 10.15 (Catalina) or later and Safari 14 or later
+- You must have Xcode installed (available from the Mac App Store)
+- The app window contains two buttons:
+  - "Enable BlueRaven Extension" - Opens extension settings for BlueRaven
+  - "Open Safari Extensions Settings" - Opens Safari's general extensions page
 
 ## 💡 Usage
 1. Click the BlueRaven icon in your browser toolbar

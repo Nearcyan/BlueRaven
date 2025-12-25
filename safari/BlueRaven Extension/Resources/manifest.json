@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "BlueRaven",
+  "version": "1.0",
+  "description": "Modern theme for Twitter/X",
+  "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "32": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "permissions": ["storage"],
+  "host_permissions": [
+    "*://twitter.com/*",
+    "*://x.com/*"
+  ],
+  "content_scripts": [{
+    "matches": [
+      "*://twitter.com/*",
+      "*://x.com/*"
+    ],
+    "css": ["styles.css"],
+    "js": ["config.js", "content.js"]
+  }],
+  "web_accessible_resources": [{
+    "resources": ["styles.css"],
+    "matches": ["*://twitter.com/*", "*://x.com/*"]
+  }],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
