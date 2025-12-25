@@ -21,11 +21,14 @@ const TWITTER_MODS = {
         'div[data-testid="GrokDrawerHeader"]',
         'div[style*="position: absolute"][style*="bottom: 0"]:has(div[data-testid="GrokDrawer"])',
         'a[aria-label="Grok"][role="link"]',
+        'a[aria-label="SuperGrok"][role="link"]',
+        'a[href="/i/grok"]',
         'button[data-testid="grokImgGen"]',
         'div[role="presentation"]:has(button[data-testid="grokImgGen"])',
         'button[aria-label="Grok actions"][role="button"]',
         'button[aria-label="Profile Summary"][role="button"]',
-        'div[data-testid="GrokDrawer"]'
+        'div[data-testid="GrokDrawer"]',
+        'a[href*="/i/imagine"]'
       ]
     },
     leftSidebar: {
