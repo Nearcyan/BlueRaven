@@ -48,7 +48,7 @@ https://user-images.githubusercontent.com/23431444/410151955-3a6bfd11-0ba6-4db0-
 
 Contributions are desired and welcome - **please test on both browsers beforehand!**
 
-Note from the AI's assitant: 100% of this codebase was written by AI and I have not reviewed almost any of it.
+Note from the AI's assistant: 100% of this codebase was written by AI and I have not reviewed almost any of it.
 
 genAI can generally one-shot most features if you feed it the proper HTML - just show it the popup window and the config.js and then make sure you make edits for both browsers.
 
