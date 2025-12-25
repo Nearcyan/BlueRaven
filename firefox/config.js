@@ -545,45 +545,6 @@ const TWITTER_MODS = {
         -webkit-box-flex: 0 !important;
        `
     },
-    centerLayoutPro: {
-      enabled: false,
-      description: "Center Main Content <keyboard ninja>",
-      selectors: [
-        'main[role="main"]',
-      ],
-      styles: `
-        margin: 0 auto !important;
-        float: none !important;
-        width: 100% !important;
-        max-width: 600px !important;
-        flex-grow: 1 !important;
-        flex-basis: auto !important;
-        flex-direction: column !important;
-        flex-shrink: 0 !important;
-        -webkit-box-flex: 0 !important;
-       `
-    },
-    badgeColor: {
-      enabled: false,
-      description: "Fix Badge Color to Twitter Blue",
-      selectors: [
-        'div[aria-label*="unread items"]',
-        'div[aria-label*="New items"]'
-      ],
-      styles: `
-        background-color: rgb(29, 155, 240) !important;
-      `
-    },
-    unreadBadge: {
-      enabled: false,
-      description: "Fix Unread Message Badge Color",
-      selectors: [
-        'div[class*="r-sdzlij"][class*="r-1f4tc2a"][class*="r-1phboty"]'
-      ],
-      styles: `
-        background-color: rgb(29, 155, 240) !important;
-      `
-    }
   },
 
   // Button Colors
