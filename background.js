@@ -7,13 +7,25 @@ chrome.runtime.onInstalled.addListener(async () => {
     const defaultSettings = {
       hideElements: {
         sidebar: { enabled: false },
-        trending: { enabled: false }
+        trending: { enabled: false },
+        grok: { enabled: true },
+        communities: { enabled: true },
+        articles: { enabled: true },
+        explore: { enabled: true },
+        jobs: { enabled: true },
+        communityNotes: { enabled: true },
+        business: { enabled: true },
+        creatorStudio: { enabled: true }
       },
       replaceElements: {
-        xLogo: { enabled: false }
+        xLogo: { enabled: true },
+        tweetButton: { enabled: true }
       },
       styleFixes: {
         centerLayout: { enabled: false }
+      },
+      buttonColors: {
+        composeButton: { enabled: true }
       },
       theme: { enabled: false }
     };

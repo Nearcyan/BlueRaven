@@ -278,6 +278,14 @@ const TWITTER_MODS = {
         'a[href$="i/communitynotes"]'
       ]
     },
+    creatorStudio: {
+      enabled: false,
+      description: "Hide Creator Studio Tab",
+      selectors: [
+        'a[aria-label="Creator Studio"][role="link"]',
+        'a[href="/i/jf/creators/studio"]'
+      ]
+    },
     moreMenu: {
       enabled: false,
       description: "Hide \"More\" Tab",

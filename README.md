@@ -84,6 +84,26 @@ See https://wiki.mozilla.org/Add-ons/Extension_Signing#Unbranded_Builds for inst
 
 ---
 
+## ✨ Features
+
+### Enabled by Default
+- **Remove All Grok** - Hide Grok AI elements throughout the interface
+- **Use Twitter Bird Logo** - Replace the X logo with the classic Twitter bird
+- **Replace 'Post' with 'Tweet'** - Restore Tweet button text
+- **Fix Compose Button Colors** - Use Twitter blue for compose button
+- **Hide Tabs** - Communities, Articles, Explore, Jobs, Community Notes, Business, Creator Studio
+
+### Additional Options
+- Hide sidebars (left, right, or both)
+- Hide trending sections and news
+- Hide engagement metrics (likes, reposts, replies, views, bookmarks)
+- Hide user info in timeline (avatars, names, handles)
+- Hide Premium badges
+- Hide various UI elements (share button, more button, message drawer, etc.)
+- Center main content layout
+
+---
+
 <div align="center">
 🩵
 </div>
