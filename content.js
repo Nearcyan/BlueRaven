@@ -105,6 +105,32 @@ const isInRightColumn = (element) => {
   return isVisibleElement(element) && rect.left > window.innerWidth * 0.45;
 };
 
+const isAlignedWithRightSidebarSearch = (element) => {
+  const search =
+    document.querySelector('form[role="search"][aria-label="Search"]') ||
+    document.querySelector('form[role="search"]') ||
+    document.querySelector('input[data-testid="SearchBox_Search_Input"]') ||
+    document.querySelector('input[aria-label="Search query"]');
+  if (!search) {
+    return false;
+  }
+
+  const searchRect = (search.closest('form[role="search"]') || search).getBoundingClientRect();
+  const elementRect = element.getBoundingClientRect();
+  return (
+    isVisibleElement(element) &&
+    elementRect.top >= searchRect.bottom - 48 &&
+    elementRect.left >= searchRect.left - 96 &&
+    elementRect.right <= searchRect.right + 96
+  );
+};
+
+const isInRightSidebarArea = (element) => (
+  Boolean(element.closest('div[data-testid="sidebarColumn"]')) ||
+  isInRightColumn(element) ||
+  isAlignedWithRightSidebarSearch(element)
+);
+
 const getRightSidebar = () => {
   const testIdSidebar = document.querySelector('div[data-testid="sidebarColumn"]');
   if (testIdSidebar) {
@@ -287,21 +313,61 @@ const hideWhoToFollowPanel = () => {
 };
 
 const hideEmptyRightSidebarCards = () => {
+  const cardSelectors = [
+    'div[class~="r-jxzhtn"][class~="r-1867qdf"][class~="r-rs99b7"]',
+    'div[class~="r-jxzhtn"][class~="r-rs99b7"]',
+    'div[class~="r-1phboty"][class~="r-rs99b7"][class~="r-1udh08x"]'
+  ];
+
   document
-    .querySelectorAll('div[class~="r-jxzhtn"][class~="r-1867qdf"][class~="r-rs99b7"], div[class~="r-jxzhtn"][class~="r-rs99b7"]')
+    .querySelectorAll(cardSelectors.join(','))
     .forEach(card => {
       const hasSearch = Boolean(card.querySelector('form[role="search"], input[data-testid="SearchBox_Search_Input"], input[aria-label="Search query"]'));
-      if (hasSearch || !isInRightColumn(card)) {
+      if (hasSearch || !isInRightSidebarArea(card)) {
         return;
       }
 
-      const visibleChildren = Array.from(card.children)
-        .filter(child => {
-          const style = window.getComputedStyle(child);
-          const rect = child.getBoundingClientRect();
-          return style.display !== 'none' && rect.width > 0 && rect.height > 0;
+      const rect = card.getBoundingClientRect();
+      const style = window.getComputedStyle(card);
+      const hasCardFrame =
+        rect.width >= 240 &&
+        rect.width <= 560 &&
+        rect.height >= 40 &&
+        rect.height <= window.innerHeight * 0.9 &&
+        (
+          parseFloat(style.borderTopLeftRadius) >= 8 ||
+          parseFloat(style.borderTopWidth) > 0 ||
+          parseFloat(style.borderBottomWidth) > 0 ||
+          style.overflow === 'hidden'
+        );
+      if (!hasCardFrame) {
+        return;
+      }
+
+      const hasVisibleContent = Array.from(card.querySelectorAll('*'))
+        .some(child => {
+          const childStyle = window.getComputedStyle(child);
+          const childRect = child.getBoundingClientRect();
+          if (
+            childStyle.display === 'none' ||
+            childStyle.visibility === 'hidden' ||
+            parseFloat(childStyle.opacity) === 0 ||
+            childRect.width === 0 ||
+            childRect.height === 0
+          ) {
+            return false;
+          }
+
+          if (child.matches('img, video, canvas, input, textarea, select')) {
+            return true;
+          }
+
+          return Array.from(child.childNodes).some(node => (
+            node.nodeType === Node.TEXT_NODE &&
+            normalizeSidebarText(node.textContent || '') !== ''
+          ));
         });
-      if (visibleChildren.length === 0 || normalizeSidebarText(card.innerText || '') === '') {
+      if (!hasVisibleContent) {
         hideManagedElement(card);
       }
     });
