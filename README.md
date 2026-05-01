@@ -92,6 +92,8 @@ See https://wiki.mozilla.org/Add-ons/Extension_Signing#Unbranded_Builds for inst
 - **Replace 'Post' with 'Tweet'** - Restore Tweet button text
 - **Fix Compose Button Colors** - Use Twitter blue for compose button
 - **Hide Tabs** - Communities, Articles, Explore, Jobs, Community Notes, Business, Creator Studio
+- **Hide extra chrome** - Account switcher and floating chat button
+- **Hide right sidebar extras** - Remove What's happening, Who to follow, and footer/legal modules while keeping search
 
 ### Additional Options
 - Hide sidebars (left, right, or both)

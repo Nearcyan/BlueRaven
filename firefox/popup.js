@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                         'messages',
                         'business',
                         'communityNotes',
+                        'creatorStudio',
                         'moreMenu'].includes(key)
       },
       {
@@ -44,6 +45,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         title: 'Elements',
         filter: key => ['leftSidebar',
                         'rightSidebar',
+                        'whatsHappeningPanel',
+                        'whoToFollowPanel',
+                        'rightSidebarFooter',
                         'bothSidebars',
                         'trending',
                         'brokenSpacer',
@@ -51,6 +55,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                         'messageDrawer',
                         'shareButton',
                         'moreButton',
+                        'accountSwitcher',
+                        'floatingChatButton',
                         'socialContext',
                         'accountSuggestions',
                         'trendingNews',

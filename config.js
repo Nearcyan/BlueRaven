@@ -46,6 +46,37 @@ const TWITTER_MODS = {
         'div[class*="css-175oi2r r-aqfbo4 r-1pi2tsx r-1xcajam r-1d2f490 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af"]'
       ]
     },
+    whatsHappeningPanel: {
+      enabled: true,
+      description: "Hide What's Happening Panel",
+      selectors: [
+        'div[class~="r-jxzhtn"][class~="r-1867qdf"][class~="r-rs99b7"]:has(section[role="region"] [aria-label="Timeline: Trending now"])',
+        'div[class~="r-jxzhtn"][class~="r-1867qdf"][class~="r-rs99b7"]:has(section[role="region"] [data-testid="trend"])',
+        'div[class~="r-jxzhtn"][class~="r-1867qdf"][class~="r-rs99b7"]:has([data-testid="trend"])',
+        'div[class~="r-jxzhtn"][class~="r-1867qdf"][class~="r-rs99b7"]:has(a[href="/explore/tabs/for-you"])'
+      ]
+    },
+    whoToFollowPanel: {
+      enabled: true,
+      description: "Hide Who to Follow Panel",
+      selectors: [
+        'div[class~="r-jxzhtn"][class~="r-1867qdf"][class~="r-rs99b7"]:has(aside[aria-label="Who to follow"])',
+        'div[class~="r-jxzhtn"][class~="r-1867qdf"][class~="r-rs99b7"]:has(a[href*="/i/connect_people"])',
+        'aside[aria-label="Who to follow"]'
+      ]
+    },
+    rightSidebarFooter: {
+      enabled: true,
+      description: "Hide Right Sidebar Footer",
+      selectors: [
+        'div[data-testid="sidebarColumn"] [aria-label="Footer"]',
+        'div[data-testid="sidebarColumn"] a[href="/tos"]',
+        'div[data-testid="sidebarColumn"] a[href="/privacy"]',
+        'div[data-testid="sidebarColumn"] a[href="/privacy/cookie"]',
+        'div[data-testid="sidebarColumn"] a[href="/imprint"]',
+        'div[data-testid="sidebarColumn"] a[href="/accessibility"]'
+      ]
+    },
     bothSidebars: {
       enabled: false,
       description: "Hide Both Sidebars <keyboard ninja>",
@@ -75,6 +106,69 @@ const TWITTER_MODS = {
       description: "Hide Messages Drawer",
       selectors: [
         'div[data-testid="DMDrawer"]',
+        'div[data-testid="DMDrawerHeader"]',
+        'div[role="complementary"]:has(div[data-testid="DMDrawer"])',
+        'div[role="complementary"]:has(div[data-testid="DMDrawerHeader"])',
+        'div[style*="position: fixed"][style*="bottom: 0"]:has(div[data-testid="DMDrawer"])',
+        'div[style*="position: fixed"][style*="bottom: 0"]:has(div[data-testid="DMDrawerHeader"])',
+      ]
+    },
+    floatingChatButton: {
+      enabled: true,
+      description: "Hide Floating Chat Button",
+      selectors: [
+        'div[data-testid="GrokDrawer"]',
+        'div[data-testid="GrokDrawerHeader"]',
+        '[data-testid="GrokDrawer"]',
+        '[data-testid="GrokDrawerHeader"]',
+        '[data-testid^="GrokDrawer"]',
+        'div[data-testid="DMDrawer"]',
+        'div[data-testid="DMDrawerHeader"]',
+        'svg[data-icon="icon-messages-stroke"]',
+        'button:has(svg[data-icon="icon-messages-stroke"])',
+        '[role="button"]:has(svg[data-icon="icon-messages-stroke"])',
+        'div:has(> button:has(svg[data-icon="icon-messages-stroke"]))',
+        'div:has(> [role="button"]:has(svg[data-icon="icon-messages-stroke"]))',
+        'div[style*="position: fixed"]:has(svg[data-icon="icon-messages-stroke"])',
+        'div[style*="position: absolute"]:has(svg[data-icon="icon-messages-stroke"])',
+        '[aria-label^="Grok"][role="button"]',
+        '[aria-label*="Grok"][role="button"]',
+        'button[aria-label^="Grok"]',
+        'button[aria-label*="Grok"]',
+        'div[aria-label^="Grok"][role="button"]',
+        'div[aria-label*="Grok"][role="button"]',
+        'div[role="complementary"]:has(div[data-testid="DMDrawer"])',
+        'div[role="complementary"]:has(div[data-testid="DMDrawerHeader"])',
+        'div[role="complementary"]:has(div[data-testid="GrokDrawer"])',
+        'div[role="complementary"]:has(div[data-testid="GrokDrawerHeader"])',
+        'div[style*="position: fixed"][style*="bottom: 0"]:has(button[aria-label="Messages"])',
+        'div[style*="position: fixed"][style*="bottom: 0"]:has(button[aria-label="Message"])',
+        'div[style*="position: fixed"][style*="bottom: 0"]:has(button[aria-label="Open Messages"])',
+        'div[style*="position: fixed"][style*="bottom: 0"]:has(button[aria-label="Open messages"])',
+        'div[style*="position: fixed"][style*="bottom: 0"]:has(button[aria-label="Open chat"])',
+        'div[style*="position: fixed"][style*="bottom: 0"]:has(button[aria-label="Open Chat"])',
+        'div[style*="position: fixed"][style*="bottom: 0"]:has(button[aria-label="Grok"])',
+        'div[style*="position: fixed"][style*="bottom:"][style*="right:"]:has([aria-label^="Grok"])',
+        'div[style*="position: fixed"][style*="bottom:"][style*="right:"]:has([aria-label*="Grok"])',
+        'div[style*="position: fixed"][style*="bottom:"][style*="right:"]:has([data-testid^="Grok"])',
+        'div[style*="position: fixed"][style*="bottom:"][style*="right:"]:has(button):has(svg)',
+        'body > div[style*="position: fixed"][style*="bottom:"][style*="right:"]:has(button)',
+        '[aria-label="Messages"][role="button"]',
+        '[aria-label="Message"][role="button"]',
+        '[aria-label="Open Messages"][role="button"]',
+        '[aria-label="Open messages"][role="button"]',
+        '[aria-label="Open chat"][role="button"]',
+        '[aria-label="Open Chat"][role="button"]',
+        '[aria-label="Grok"][role="button"]',
+        'button[aria-label="Messages"][role="button"]',
+        'button[aria-label="Message"][role="button"]',
+        'button[aria-label="Open Messages"][role="button"]',
+        'button[aria-label="Open messages"][role="button"]',
+        'button[aria-label="Open chat"][role="button"]',
+        'button[aria-label="Open Chat"][role="button"]',
+        'button[aria-label="Grok"][role="button"]',
+        'button[aria-label^="Grok"][role="button"]',
+        'button[aria-label*="Grok"][role="button"]'
       ]
     },
     shareButton: {
@@ -279,11 +373,42 @@ const TWITTER_MODS = {
       ]
     },
     creatorStudio: {
-      enabled: false,
+      enabled: true,
       description: "Hide Creator Studio Tab",
       selectors: [
+        '[aria-label="Creator Studio"]',
+        '[aria-label="Creator Studio"][role="link"]',
+        '[data-testid="creator-studio-tab-item"]',
+        '[data-testid="AppTabBar_CreatorStudio_Link"]',
+        '[href="/i/jf/creators/studio"]',
+        '[href^="/i/jf/creators/studio"]',
+        '[href*="/i/jf/creators/studio"]',
+        '[href*="/i/creator"]',
+        '[href*="/i/creators"]',
+        '[href*="studio.twitter.com"]',
+        'a[aria-label="Creator Studio"]',
         'a[aria-label="Creator Studio"][role="link"]',
-        'a[href="/i/jf/creators/studio"]'
+        'a[data-testid="creator-studio-tab-item"]',
+        'a[data-testid="AppTabBar_CreatorStudio_Link"]',
+        'a[href="/i/jf/creators/studio"]',
+        'a[href^="/i/jf/creators/studio"]',
+        'a[href*="/i/jf/creators/studio"]',
+        'a[href*="/i/creator"]',
+        'a[href*="/i/creators"]',
+        'a[href*="studio.twitter.com"]'
+      ]
+    },
+    accountSwitcher: {
+      enabled: true,
+      description: "Hide Account Switcher",
+      selectors: [
+        '[data-testid="SideNav_AccountSwitcher_Button"]',
+        'button[data-testid="SideNav_AccountSwitcher_Button"]',
+        'div[data-testid="SideNav_AccountSwitcher_Button"]',
+        'button[aria-label="Account menu"][role="button"]',
+        'button[aria-label*="Account menu"][role="button"]',
+        'div[aria-label="Account menu"][role="button"]',
+        'div[aria-label*="Account menu"][role="button"]'
       ]
     },
     moreMenu: {
