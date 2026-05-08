@@ -250,6 +250,18 @@ const findRightSidebarCardRoot = (element, preserveRoot) => {
 };
 
 const hideFloatingMessageButton = () => {
+  document.querySelectorAll('[data-testid="chat-drawer-root"], button[data-testid="chat-drawer-main"]').forEach(element => {
+    const root = element.closest('[data-testid="chat-drawer-root"]') || element;
+    const rect = root.getBoundingClientRect();
+    const isBottomDrawer = rect.bottom > window.innerHeight * 0.5;
+    if (!isBottomDrawer) {
+      return;
+    }
+
+    const positionedContainer = root.closest('div[style*="position: fixed"][style*="bottom"], div[style*="position: absolute"][style*="bottom"]');
+    hideManagedElement(positionedContainer || root);
+  });
+
   document.querySelectorAll('svg[data-icon="icon-messages-stroke"]').forEach(icon => {
     const rect = icon.getBoundingClientRect();
     const isBottomRight = rect.left > window.innerWidth * 0.5 && rect.top > window.innerHeight * 0.45;
